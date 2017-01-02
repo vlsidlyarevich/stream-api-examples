@@ -1,29 +1,21 @@
 # Stream-API-Examples
 Useful features, and examples of Java's 8 Stream API
 
-###Ways to create stream
-I've decided to group ways of creating Stream's in one simple class called `StreamCreator.java`.
-Of course, you don't need to take away Stream creation logic into separate class, it was done just for readability and simple navigation.
+---
 
-#### Empty stream
-There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+###What is stream?
 
-[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L11)
-```java
-return Stream.empty();
-```
+Stream represents a sequence of objects from a source, which supports aggregate operations. Following are the characteristics of a Stream −
 
-#### From object
+* Sequence of elements − A stream provides a set of elements of specific type in a sequential manner. A stream gets/computes elements on demand. It never stores the elements.
 
-#### From Collection
+* Source − Stream takes Collections, Arrays, or I/O resources as input source.
 
-#### From Array
+* Aggregate operations − Stream supports aggregate operations like filter, map, limit, reduce, find, match, and so on.
 
-#### From another API's
+* Pipelining − Most of the stream operations return stream itself so that their result can be pipelined. These operations are called intermediate operations and their function is to take input, process them, and return output to the target. collect() method is a terminal operation which is normally present at the end of the pipelining operation to mark the end of the stream.
 
-#### From iterating
-
-#### From generating
+* Automatic iterations − Stream operations do the iterations internally over the source elements provided, in contrast to Collections where explicit iteration is required.
 
 ---
 
@@ -34,5 +26,63 @@ Stream can not modify or mutate it's source. For example in [Class]() stream wil
 
 ####Streams are stateless
 Streams aren't depends on outer conditions. 
+
+---
+
+###Ways to create stream
+I've decided to group ways of creating Stream's in one simple class called `StreamCreator.java`.
+Of course, you don't need to take away Stream creation logic into separate class, it was done just for readability and simple navigation.
+
+#### Empty stream
+There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+
+[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L11)
+```java
+Stream.empty();
+```
+
+#### From object
+There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+
+[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L11)
+```java
+Stream.empty();
+```
+
+
+#### From Collection
+There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+
+[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L11)
+```java
+collection.stream();
+```
+
+#### From another API's
+There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+
+[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L11)
+```java
+Stream.empty();
+```
+
+#### From iterating
+There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+
+[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L11)
+```java
+Stream.iterate(0, n -> n + 1).limit(2);
+```
+
+#### From generating
+There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+
+[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L11)
+```java
+Stream.generate(supplier).limit(maxSize);
+```
+
+---
+
 
 ---
