@@ -14,8 +14,25 @@ return Stream.empty();
 ```
 
 #### From object
-* From Collection
-* From Array
-* From another API's
-* From iterating
-* From generating
+
+#### From Collection
+
+#### From Array
+
+#### From another API's
+
+#### From iterating
+
+#### From generating
+
+---
+
+###Stream's properties
+
+####Non interfering
+Stream can not modify or mutate it's source. For example in [Class]() stream will not add new values to collection.
+
+####Streams are stateless
+Streams aren't depends on outer conditions. 
+
+---
