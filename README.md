@@ -83,6 +83,10 @@ Stream.generate(supplier).limit(maxSize);
 ```
 
 ---
-
+###Stream operations
+There is two types of operations in streams:
+* Intermediate operations (distinct,filter,map,flatMap,peek,sorted,limit,skip)
+* Terminal operations (collect,allMatch,anyMatch,findAny,findFirst,noneMatch,forEach,reduce)
+Difference is that
 
 ---
