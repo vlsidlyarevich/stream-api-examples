@@ -35,7 +35,7 @@ Look for [CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Exa
 #### Empty stream
 There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
 
-[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L11)
+[CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/%D0%A1reationExample.java#L12)
 ```java
 Stream.empty();
 ```
@@ -43,7 +43,7 @@ Stream.empty();
 #### From object
 There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
 
-[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L15)
+[CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/%D0%A1reationExample.java#L13)
 ```java
 Stream.of(obj);
 ```
@@ -52,7 +52,7 @@ Stream.of(obj);
 #### From Collection
 You can create stream from collection, sequential it or not depends on type of collection.
 
-[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L19)
+[CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/%D0%A1reationExample.java#L14-L18)
 ```java
 collection.stream();
 ```
@@ -60,7 +60,7 @@ collection.stream();
 #### From another API's
 It is possible to create streams from popular Java API's like for example regular expressions:
 
-[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L23)
+[CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/%D0%A1reationExample.java#L22-L23)
 ```java
 String sentence = "Java 8 Stream tutorial";
 Stream<String> regExpStream = Pattern.compile("\\w").splitAsStream(sentence);
@@ -69,7 +69,7 @@ Stream<String> regExpStream = Pattern.compile("\\w").splitAsStream(sentence);
 #### From iterating
 TBD
 
-[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L23)
+[CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/%D0%A1reationExample.java#L19)
 ```java
 Stream.iterate(0, n -> n + 1).limit(2);
 ```
@@ -77,7 +77,7 @@ Stream.iterate(0, n -> n + 1).limit(2);
 #### From generating
 TBD
 
-[StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L27)
+[CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/%D0%A1reationExample.java#L20)
 ```java
 Stream.generate(supplier).limit(maxSize);
 ```
