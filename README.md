@@ -67,7 +67,7 @@ Stream<String> regExpStream = Pattern.compile("\\w").splitAsStream(sentence);
 ```
 
 #### From iterating
-TBD
+In the example below, we use Stream.iterate which allows us to call infinite streams, a stream with out a fixed size. 
 
 [CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/%D0%A1reationExample.java#L19)
 ```java
@@ -75,11 +75,11 @@ Stream.iterate(0, n -> n + 1).limit(2);
 ```
 
 #### From generating
-TBD
+Stream.generate allows you to produce an infinite stream of values on demand. The code below will generate a stream of 5 random double numbers from 0 to 1 and we apply the limit otherwise the stream would be unbounded.
 
 [CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/%D0%A1reationExample.java#L20)
 ```java
-Stream.generate(supplier).limit(maxSize);
+Stream generatedStream = Stream.generate(Math::random).limit(5L);
 ```
 
 ---
