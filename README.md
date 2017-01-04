@@ -30,8 +30,7 @@ Streams aren't depends on outer conditions.
 ---
 
 ###Ways to create stream
-I've decided to group ways of creating Stream's in one simple class called `StreamCreator.java`.
-Of course, you don't need to take away Stream creation logic into separate class, it was done just for readability and simple navigation.
+Look for [CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/CreationExample.java) for examples of creation Streams.
 
 #### Empty stream
 There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
@@ -51,7 +50,7 @@ Stream.of(obj);
 
 
 #### From Collection
-There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+You can create stream from collection, sequential it or not depends on type of collection.
 
 [StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L19)
 ```java
@@ -59,15 +58,16 @@ collection.stream();
 ```
 
 #### From another API's
-There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+It is possible to create streams from popular Java API's like for example regular expressions:
 
 [StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L23)
 ```java
-Stream.empty();
+String sentence = "Java 8 Stream tutorial";
+Stream<String> regExpStream = Pattern.compile("\\w").splitAsStream(sentence);
 ```
 
 #### From iterating
-There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+TBD
 
 [StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L23)
 ```java
@@ -75,7 +75,7 @@ Stream.iterate(0, n -> n + 1).limit(2);
 ```
 
 #### From generating
-There is a posibility to create empty sequential stream. Stream's emptyness means that there is no elements in it.
+TBD
 
 [StreamCreator.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/StreamCreator.java#L27)
 ```java
@@ -89,5 +89,6 @@ There is two types of operations in streams:
 * Terminal operations (allMatch,anyMatch,noneMatch,findAny,findFirst,forEach,iterator,reduce,collect)
 Difference is that
 * Short-circuiting (find*,*Match,limit) e.g. 5 terminal commands-all match and find, and one limit command
+
 
 ---
