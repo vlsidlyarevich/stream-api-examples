@@ -103,38 +103,38 @@ Difference is that
 * Short-circuiting (find*,*Match,limit) e.g. 5 terminal commands-all match and find, and one limit command
 
 ####distinct
-**Stream<S> s.distinct();**
+`Stream<S> s.distinct();`
 
 ####filter
-**Stream<S> s.filter(Predicate <S>);**
+`Stream<S> s.filter(Predicate <S>);`
 Creates stream with all elements according to given ``Predicate <S>``
 
 ####map
-**Stream<T> s.map(Function<S, T>);**
+`Stream<T> s.map(Function<S, T>);`
 
 ####flatMap
-**Stream<T> s.map(Function<S, Stream<T>>);**
+`Stream<T> s.map(Function<S, Stream<T>>);`
 
 ####peek
-**Stream<S> s.peek(Consumer<S>)**
+`Stream<S> s.peek(Consumer<S>)`
 
 ####sorted
-**Stream<S> s.sorted()**
+`Stream<S> s.sorted()`
 
 ####limit
-**Stream<S> s.limit(long);**
+`Stream<S> s.limit(long);`
 
 ####skip
-**Stream<S> s.skip(long);**
+`Stream<S> s.skip(long);`
 
 ####unordered
-**Stream<S> s.unordered();**
+`Stream<S> s.unordered();`
 
 ####parallel
-**Stream<S> s.parallel();**
+`Stream<S> s.parallel();`
 
 ####sequential
-**Stream<S> s.sequential();**
+`Stream<S> s.sequential();`
 
 
 ---
