@@ -105,37 +105,56 @@ Difference is that
 ####distinct
 `Stream<S> s.distinct();`
 
+Marks Stream as distinct. All elements are distinct.
+
 ####filter
 `Stream<S> s.filter(Predicate <S>);`
 
-Creates stream with all elements according to given ``Predicate <S>``
+Creates stream with all elements according to given ``Predicate <S>``.
 
 ####map
 `Stream<T> s.map(Function<S, T>);`
 
+Applies function from type S to type T for every element of stream.
+
 ####flatMap
 `Stream<T> s.map(Function<S, Stream<T>>);`
+
+Converts stream with nested Data like `Stream<String[]>` to Stream without nesting, e.g. `Stream<String>`.
 
 ####peek
 `Stream<S> s.peek(Consumer<S>)`
 
+Useful for Streams debugging, allows to look what data in some moments is processing.
+
 ####sorted
 `Stream<S> s.sorted()`
+
+Marks Stream as sorted. It becomes sorted.
 
 ####limit
 `Stream<S> s.limit(long);`
 
+Limit Stream to given size.
+
 ####skip
 `Stream<S> s.skip(long);`
+
+Skip first nth elements of the Stream.
 
 ####unordered
 `Stream<S> s.unordered();`
 
+Marks Stream as unordered. It becomes unordered.
+
 ####parallel
 `Stream<S> s.parallel();`
+
+Create parallel Stream.
 
 ####sequential
 `Stream<S> s.sequential();`
 
+Marks Stream as sequential. It becomes sequential.
 
 ---
