@@ -107,6 +107,7 @@ Difference is that
 
 ####filter
 `Stream<S> s.filter(Predicate <S>);`
+
 Creates stream with all elements according to given ``Predicate <S>``
 
 ####map
