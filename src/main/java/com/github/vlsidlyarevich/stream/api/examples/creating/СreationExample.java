@@ -22,11 +22,18 @@ public class СreationExample {
         String sentence = "Java 8 Stream tutorial";
         Stream<String> regExpStream = Pattern.compile("\\w").splitAsStream(sentence);
 
+        Stream buildedStream = Stream.builder()
+                .add("Java 8")
+                .add("Stream")
+                .add("tutorial")
+                .build();
+
         System.out.println("Empty stream: " + Arrays.toString(emptyStream.toArray()));
         System.out.println("Stream from string: " + Arrays.toString(stringStream.toArray()));
         System.out.println("Stream from collection: " + Arrays.toString(collectionStream.toArray()));
         System.out.println("Stream from iteration: " + Arrays.toString(iterateStream.toArray()));
         System.out.println("Stream from function: " + Arrays.toString(generatedStream.toArray()));
         System.out.println("Stream from regular expression: " + Arrays.toString(regExpStream.toArray()));
+        System.out.println("Stream from stream builder: " + Arrays.toString(buildedStream.toArray()));
     }
 }
