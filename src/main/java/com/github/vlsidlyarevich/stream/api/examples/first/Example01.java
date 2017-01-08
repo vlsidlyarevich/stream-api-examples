@@ -3,6 +3,8 @@ package com.github.vlsidlyarevich.stream.api.examples.first;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.util.Comparator.comparing;
+
 
 public class Example01 {
 
@@ -41,7 +43,7 @@ public class Example01 {
                 .filter(person -> person.age <= 25)
                 .collect(Collectors.toSet())
                 .stream()
-                .sorted((o1, o2) -> Integer.compare(o1.age, o2.age))
+                .sorted(comparing(person -> person.age))
                 .forEach(person -> System.out.println(person.name));
     }
 
