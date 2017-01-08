@@ -1,8 +1,8 @@
 package com.github.vlsidlyarevich.stream.api.examples.second;
 
-
 import java.util.*;
 import java.util.stream.Stream;
+
 
 public class Example02 {
 

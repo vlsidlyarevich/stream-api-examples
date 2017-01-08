@@ -82,6 +82,18 @@ Stream.generate allows you to produce an infinite stream of values on demand. Th
 Stream generatedStream = Stream.generate(Math::random).limit(5L);
 ```
 
+#### From builder
+Stream.builder can create a stream of values that are added
+
+[CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/%D0%A1reationExample.java#L25-29)
+```java
+Stream buildedStream = Stream.builder()
+            .add("Java 8")
+            .add("Stream")
+            .add("tutorial")
+            .build();
+```
+
 ---
 ###Stream operations
 There is two types of operations in streams:
@@ -89,6 +101,39 @@ There is two types of operations in streams:
 * Terminal operations (allMatch,anyMatch,noneMatch,findAny,findFirst,forEach,iterator,reduce,collect)
 Difference is that
 * Short-circuiting (find*,*Match,limit) e.g. 5 terminal commands-all match and find, and one limit command
+
+####distinct
+**Stream<S> s.distinct();**
+
+####filter
+**Stream<S> s.filter(Predicate <S>);**
+
+####map
+**Stream<T> s.map(Function<S, T>);**
+
+####flatMap
+**Stream<T> s.map(Function<S, Stream<T>>);**
+
+####peek
+**Stream<S> s.peek(Consumer<S>)**
+
+####sorted
+**Stream<S> s.sorted()**
+
+####limit
+**Stream<S> s.limit(long);**
+
+####skip
+**Stream<S> s.skip(long);**
+
+####unordered
+**Stream<S> s.unordered();**
+
+####parallel
+**Stream<S> s.parallel();**
+
+####sequential
+**Stream<S> s.sequential();**
 
 
 ---
