@@ -150,11 +150,11 @@ Marks Stream as unordered. It becomes unordered.
 ####parallel
 `Stream<S> s.parallel();`
 
-Create parallel Stream.
+All future operations are multi-threaded.
 
 ####sequential
 `Stream<S> s.sequential();`
 
-Marks Stream as sequential. It becomes sequential.
+Marks Stream as sequential. All future operations are in single thread.
 
 ---
