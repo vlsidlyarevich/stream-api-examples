@@ -3,7 +3,7 @@ Useful features, and examples of Java's 8 Stream API
 
 ---
 
-###What is stream?
+##What is stream?
 
 Stream represents a sequence of objects from a source, which supports aggregate operations. Following are the characteristics of a Stream −
 
@@ -19,7 +19,7 @@ Stream represents a sequence of objects from a source, which supports aggregate 
 
 ---
 
-###Stream's properties
+##Stream's properties
 
 ####Non interfering
 Stream can not modify or mutate it's source. For example in [Class]() stream will not add new values to collection.
@@ -29,7 +29,7 @@ Streams aren't depends on outer conditions.
 
 ---
 
-###Ways to create stream
+##Ways to create stream
 Look for [CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/CreationExample.java) for examples of creation Streams.
 
 #### Empty stream
@@ -95,12 +95,14 @@ Stream buildedStream = Stream.builder()
 ```
 
 ---
-###Stream operations
-There is two types of operations in streams:
+##Stream operations
+There is three types of operations in streams:
 * Intermediate operations (distinct,filter,map,flatMap,peek,sorted,limit,skip,unordered,parallel,sequential)
 * Terminal operations (allMatch,anyMatch,noneMatch,findAny,findFirst,forEach,iterator,reduce,collect)
 Difference is that
 * Short-circuiting (find*,*Match,limit) e.g. 5 terminal commands-all match and find, and one limit command
+
+###Intermidiate operations
 
 ####distinct
 `Stream<S> s.distinct();`
@@ -157,4 +159,5 @@ All future operations are multi-threaded.
 
 Marks Stream as sequential. All future operations are in single thread.
 
+###Terminal operations
 ---
