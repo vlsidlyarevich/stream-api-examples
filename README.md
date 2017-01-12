@@ -160,4 +160,5 @@ All future operations are multi-threaded.
 Marks Stream as sequential. All future operations are in single thread.
 
 ###Terminal operations
+
 ---
