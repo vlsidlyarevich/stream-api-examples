@@ -3,7 +3,7 @@ Useful features, and examples of Java's 8 Stream API
 
 ---
 
-##What is stream?
+## What is stream?
 
 Stream represents a sequence of objects from a source, which supports aggregate operations. Following are the characteristics of a Stream −
 
@@ -19,17 +19,17 @@ Stream represents a sequence of objects from a source, which supports aggregate 
 
 ---
 
-##Stream's properties
+## Stream's properties
 
-####Non interfering
+#### Non interfering
 Stream can not modify or mutate it's source. For example in [Class]() stream will not add new values to collection.
 
-####Streams are stateless
+#### Streams are stateless
 Streams aren't depends on outer conditions. 
 
 ---
 
-##Ways to create stream
+## Ways to create stream
 Look for [CreationExample.java](https://github.com/vlsidlyarevich/Stream-API-Examples/blob/master/src/main/java/com/github/vlsidlyarevich/stream/api/examples/creating/CreationExample.java) for examples of creation Streams.
 
 #### Empty stream
@@ -95,70 +95,136 @@ Stream buildedStream = Stream.builder()
 ```
 
 ---
-##Stream operations
+## Stream operations
 There is three types of operations in streams:
 * Intermediate operations (distinct,filter,map,flatMap,peek,sorted,limit,skip,unordered,parallel,sequential)
 * Terminal operations (allMatch,anyMatch,noneMatch,findAny,findFirst,forEach,iterator,reduce,collect)
 Difference is that
 * Short-circuiting (find*,*Match,limit) e.g. 5 terminal commands-all match and find, and one limit command
 
-###Intermidiate operations
+### Intermidiate operations
 
-####distinct
-`Stream<S> s.distinct();`
+#### distinct
+`Stream<T> distinct();`
 
 Marks Stream as distinct. All elements are distinct.
 
-####filter
-`Stream<S> s.filter(Predicate <S>);`
+#### filter
+`Stream<T> filter(Predicate<? super T> predicate);`
 
-Creates stream with all elements according to given ``Predicate <S>``.
+Creates stream with all elements according to given ``Predicate<S>``.
 
-####map
-`Stream<T> s.map(Function<S, T>);`
+#### map
+`<R> Stream<R> map(Function<? super T, ? extends R> mapper);`
 
 Applies function from type S to type T for every element of stream.
 
-####flatMap
-`Stream<T> s.map(Function<S, Stream<T>>);`
+#### flatMap
+`<R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper);`
 
 Converts stream with nested Data like `Stream<String[]>` to Stream without nesting, e.g. `Stream<String>`.
 
-####peek
-`Stream<S> s.peek(Consumer<S>)`
+#### peek
+`Stream<T> peek(Consumer<? super T> action);`
 
 Useful for Streams debugging, allows to look what data in some moments is processing.
 
-####sorted
-`Stream<S> s.sorted()`
+#### sorted
+`Stream<T> sorted();`
+`Stream<T> sorted(Comparator<? super T> comparator);`
 
 Marks Stream as sorted. It becomes sorted.
 
-####limit
-`Stream<S> s.limit(long);`
+#### limit
+`Stream<T> limit(long maxSize);`
 
 Limit Stream to given size.
 
-####skip
-`Stream<S> s.skip(long);`
+#### skip
+`Stream<T> skip(long n);`
 
 Skip first nth elements of the Stream.
 
-####unordered
+#### unordered
 `Stream<S> s.unordered();`
 
 Marks Stream as unordered. It becomes unordered.
 
-####parallel
+#### parallel
 `Stream<S> s.parallel();`
 
 All future operations are multi-threaded.
 
-####sequential
+#### sequential
 `Stream<S> s.sequential();`
 
 Marks Stream as sequential. All future operations are in single thread.
 
-###Terminal operations
+---
+
+### Terminal operations
+
+#### forEach
+`void forEach(Consumer<? super T> action);`
+
+Performs an given action `Consumer<S>` for each element of the stream.
+
+#### toArray
+`Object[] toArray();`
+
+Returns an array with elements of this stream.
+
+#### reduce
+`T reduce(T identity, BinaryOperator<T> accumulator);`
+`Optional<T> reduce(BinaryOperator<T> accumulator);`
+`<U> U reduce(U identity,BiFunction<U, ? super T, U> accumulator,BinaryOperator<U> combiner);`
+
+Combines stream elements into one using `BinaryOperator<Type>`.
+
+#### collect
+`<R> R collect(Supplier<R> supplier,BiConsumer<R, ? super T> accumulator,BiConsumer<R, R> combiner);`
+`<R, A> R collect(Collector<? super T, A, R> collector);`
+
+Collects elements of stream into another container.
+
+#### min
+`Optional<T> min(Comparator<? super T> comparator);`
+
+Performs an given action `Consumer<S>` for each element of the stream.
+
+#### max
+`Optional<T> max(Comparator<? super T> comparator);`
+
+Performs an given action `Consumer<S>` for each element of the stream.
+
+#### count
+`long count();`
+
+Performs an given action `Consumer<S>` for each element of the stream.
+
+#### anymatch
+`boolean anyMatch(Predicate<? super T> predicate);`
+
+Performs an given action `Consumer<S>` for each element of the stream.
+
+#### allMatch
+`boolean allMatch(Predicate<? super T> predicate);`
+
+Performs an given action `Consumer<S>` for each element of the stream.
+
+#### noneMatch
+`boolean noneMatch(Predicate<? super T> predicate);`
+
+Performs an given action `Consumer<S>` for each element of the stream.
+
+#### findFirst
+`Optional<T> findFirst();`
+
+Performs an given action `Consumer<S>` for each element of the stream.
+
+#### findAny
+`Optional<T> findAny();`
+
+Performs an given action `Consumer<S>` for each element of the stream.
 
 ---
