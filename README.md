@@ -190,41 +190,41 @@ Collects elements of stream into another container.
 #### min
 `Optional<T> min(Comparator<? super T> comparator);`
 
-Performs an given action `Consumer<S>` for each element of the stream.
+Finds the minimum element of the stream according to provided `Comparator<? super T> comparator`.
 
 #### max
 `Optional<T> max(Comparator<? super T> comparator);`
 
-Performs an given action `Consumer<S>` for each element of the stream.
+Finds the maximum element of the stream according to provided `Comparator<? super T> comparator`.
 
 #### count
 `long count();`
 
-Performs an given action `Consumer<S>` for each element of the stream.
+Counts number of elements in the stream.
 
 #### anymatch
 `boolean anyMatch(Predicate<? super T> predicate);`
 
-Performs an given action `Consumer<S>` for each element of the stream.
+Returns boolean variable based on fact that **any** of stream's elements match provided `Predicate<? super T> predicate`.
 
 #### allMatch
 `boolean allMatch(Predicate<? super T> predicate);`
 
-Performs an given action `Consumer<S>` for each element of the stream.
+Returns boolean variable based on fact that **all** of stream's elements match provided `Predicate<? super T> predicate`.
 
 #### noneMatch
 `boolean noneMatch(Predicate<? super T> predicate);`
 
-Performs an given action `Consumer<S>` for each element of the stream.
+Returns boolean variable based on fact that **none** of stream's elements match provided `Predicate<? super T> predicate`.
 
 #### findFirst
 `Optional<T> findFirst();`
 
-Performs an given action `Consumer<S>` for each element of the stream.
+Returns first element of the stream.
 
 #### findAny
 `Optional<T> findAny();`
 
-Performs an given action `Consumer<S>` for each element of the stream.
+Returns any element of the stream.
 
 ---
